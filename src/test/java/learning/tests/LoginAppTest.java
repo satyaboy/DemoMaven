@@ -20,6 +20,7 @@ import learning.utils.DriverManager;
 
 public class LoginAppTest extends BaseTest
 {
+	private List<String> friendsToSearch;
 	@Test(dataProvider="loginDetails")
    public  void LogInToApplication(String data) throws InterruptedException, FileNotFoundException, IOException
    {  
@@ -34,14 +35,18 @@ public class LoginAppTest extends BaseTest
 	               //FriendListPage friendlist=loginpage.userLogin(users[0], users[1]);
                     Thread.sleep(2000);
                     friendlist.getClickContact();
-                    List<String> friendsToSearch= friendlist.selectParticularNumberOfPeople(5);
-                    friendlist.searchForFriends(friendsToSearch);
+                    friendsToSearch= friendlist.selectParticularNumberOfPeople(5);
    }
    
-	public void addFriendToCampaign() throws FileNotFoundException, IOException 
+	@Test(dependsOnMethods= {"LogInToApplication"})
+	public void addFriendToCampaign() throws FileNotFoundException, IOException, InterruptedException 
 	{
 		LoginPage loginpage = new LoginPage(DriverManager.getDriver());
+		GenericUtils genericutils= new GenericUtils(DriverManager.getDriver());
 		FriendListPage friendlist=loginpage.userLogin("testuser305@friender.in", "S@ty@1qq5");
+		genericutils.SwitchToWindowChild(); 
+		friendlist.getClickContact();
+	    friendlist.searchForFriends(friendsToSearch);
 	}
 	
 	

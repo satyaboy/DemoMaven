@@ -5,7 +5,8 @@
     <classes>
       <class name="learning.tests.LoginAppTest">
         <methods>
-          <include name="LogInToApplication" invocation-numbers="0"/>
+          <include name="addFriendToCampaign"/>
+          <include name="LogInToApplication"/>
           <include name="launchApp"/>
           <include name="closeApp"/>
         </methods>
