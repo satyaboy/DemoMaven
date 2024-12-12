@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.776 s - in TestSuite
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 27.919 s <<< FAILURE! - in TestSuite
+LogInToApplication(learning.tests.LoginAppTest)  Time elapsed: 0.017 s  <<< FAILURE!
+java.util.NoSuchElementException
+	at learning.tests.LoginAppTest.LogInToApplication(LoginAppTest.java:27)
+

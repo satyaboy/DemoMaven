@@ -42,11 +42,14 @@ public class LoginPage
 		Thread.sleep(3000);
 	}
 	
-	public void userLogin(String username, String password) 
+	public FriendListPage userLogin(String username, String password) 
 	{
 		emailId.sendKeys(username);
 		Pwd.sendKeys(password);
 		loginBtn.click();
+		
+		FriendListPage friendlist = new FriendListPage(driver);
+		return friendlist;
 	}
 	
 	

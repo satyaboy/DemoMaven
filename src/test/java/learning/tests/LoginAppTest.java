@@ -3,6 +3,7 @@ package learning.tests;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -13,6 +14,7 @@ import org.testng.annotations.Test;
 
 import learning.Component.BaseTest;
 import learning.Component.GenericUtils;
+import learning.Page.FriendListPage;
 import learning.Page.LoginPage;
 import learning.utils.DriverManager;
 
@@ -21,16 +23,28 @@ public class LoginAppTest extends BaseTest
 	@Test(dataProvider="loginDetails")
    public  void LogInToApplication(String data) throws InterruptedException, FileNotFoundException, IOException
    {  
-	  String users[]= data.split(",");
+	   String users[]= data.split(",");
 	   LoginPage loginpage = new LoginPage(DriverManager.getDriver());
 	   GenericUtils genericutils= new GenericUtils(DriverManager.getDriver());
+	                Thread.sleep(2000);
 	                genericutils.SwitchToWindow();
 	                loginpage.LoginToFacebook();
 	                genericutils.SwitchToWindowChild();             
-                 //   loginpage.userLogin("testuser305@friender.in", "S@ty@1qq5");
-	                loginpage.userLogin(users[0], users[1]);
-                    Thread.sleep(1000);
+	                FriendListPage friendlist=loginpage.userLogin("testuser305@friender.in", "S@ty@1qq5");
+	               //FriendListPage friendlist=loginpage.userLogin(users[0], users[1]);
+                    Thread.sleep(2000);
+                    friendlist.getClickContact();
+                    List<String> friendsToSearch= friendlist.selectParticularNumberOfPeople(5);
+                    friendlist.searchForFriends(friendsToSearch);
    }
+   
+	public void addFriendToCampaign() throws FileNotFoundException, IOException 
+	{
+		LoginPage loginpage = new LoginPage(DriverManager.getDriver());
+		FriendListPage friendlist=loginpage.userLogin("testuser305@friender.in", "S@ty@1qq5");
+	}
+	
+	
 	
 	@DataProvider(name="loginDetails")
 	public String[] readJson() throws IOException, ParseException 

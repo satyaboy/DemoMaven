@@ -1,21 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-04T20:00:33 IST" name="Surefire suite" finished-at="2024-12-04T20:00:47 IST" duration-ms="14268">
+  <suite started-at="2024-12-05T12:40:54 IST" name="Surefire suite" finished-at="2024-12-05T12:41:21 IST" duration-ms="27537">
     <groups>
     </groups>
-    <test started-at="2024-12-04T20:00:33 IST" name="Surefire test" finished-at="2024-12-04T20:00:47 IST" duration-ms="14268">
+    <test started-at="2024-12-05T12:40:54 IST" name="Surefire test" finished-at="2024-12-05T12:41:21 IST" duration-ms="27537">
       <class name="learning.tests.LoginAppTest">
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:learning.tests.LoginAppTest@2b6856dd]" started-at="2024-12-04T20:00:33 IST" name="launchApp" finished-at="2024-12-04T20:00:37 IST" duration-ms="3890" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:40:54 IST" name="launchApp" finished-at="2024-12-05T12:40:56 IST" duration-ms="2521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method signature="LogInToApplication()[pri:0, instance:learning.tests.LoginAppTest@2b6856dd]" started-at="2024-12-04T20:00:37 IST" name="LogInToApplication" finished-at="2024-12-04T20:00:44 IST" duration-ms="6878" status="PASS">
+        <test-method signature="LogInToApplication(java.lang.String)[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:40:56 IST" name="LogInToApplication" data-provider="loginDetails" finished-at="2024-12-05T12:41:02 IST" duration-ms="5623" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser305@gmail.in,S@ty@1qq5]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LogInToApplication -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:learning.tests.LoginAppTest@2b6856dd]" started-at="2024-12-04T20:00:44 IST" name="closeApp" finished-at="2024-12-04T20:00:47 IST" duration-ms="3453" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:41:02 IST" name="closeApp" finished-at="2024-12-05T12:41:05 IST" duration-ms="3184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:41:05 IST" name="launchApp" finished-at="2024-12-05T12:41:07 IST" duration-ms="2084" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="LogInToApplication(java.lang.String)[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:41:07 IST" name="LogInToApplication" data-provider="loginDetails" finished-at="2024-12-05T12:41:13 IST" duration-ms="5928" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser300@friender.in,S@ty@1qq5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogInToApplication -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:41:13 IST" name="closeApp" finished-at="2024-12-05T12:41:16 IST" duration-ms="3200" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:41:16 IST" name="launchApp" finished-at="2024-12-05T12:41:18 IST" duration-ms="1836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="LogInToApplication(java.lang.String)[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:41:18 IST" name="LogInToApplication" data-provider="loginDetails" finished-at="2024-12-05T12:41:18 IST" duration-ms="9" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testuser321@friender.in,!Aworker2#]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.util.NoSuchElementException">
+            <full-stacktrace>
+              <![CDATA[java.util.NoSuchElementException
+at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1025)
+at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:1046)
+at learning.Component.GenericUtils.SwitchToWindow(GenericUtils.java:26)
+at learning.tests.LoginAppTest.LogInToApplication(LoginAppTest.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.util.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogInToApplication -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:learning.tests.LoginAppTest@4e91d63f]" started-at="2024-12-05T12:41:18 IST" name="closeApp" finished-at="2024-12-05T12:41:21 IST" duration-ms="3103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

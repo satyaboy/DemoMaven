@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="learning.tests.LoginAppTest" class="method navigator-link" hash-for-method="LogInToApplication(testuser321@friender.in,!Aworker2#)">LogInToApplication(testuser321@friender.in,!Aworker2#)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +117,12 @@
                     <div class="method-list-content passed suite-Surefire_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="learning.tests.LoginAppTest" class="method navigator-link" hash-for-method="LogInToApplication">LogInToApplication</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="learning.tests.LoginAppTest" class="method navigator-link" hash-for-method="LogInToApplication(testuser300@friender.in,S@ty@1qq5)">LogInToApplication(testuser300@friender.in,S@ty@1qq5)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="learning.tests.LoginAppTest" class="method navigator-link" hash-for-method="LogInToApplication(testuser305@gmail.in,S@ty@1qq5)">LogInToApplication(testuser305@gmail.in,S@ty@1qq5)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Surefire_suite -->
@@ -118,6 +137,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">learning.tests.LoginAppTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="LogInToApplication(testuser321@friender.in,!Aworker2#)">
+                  </a> <!-- LogInToApplication(testuser321@friender.in,!Aworker2#) -->
+                  <span class="method-name">LogInToApplication</span>
+                  <span class="parameters">(testuser321@friender.in,!Aworker2#)</span>
+                  <div class="stack-trace">java.util.NoSuchElementException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:1025)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:1046)
+	at learning.Component.GenericUtils.SwitchToWindow(GenericUtils.java:26)
+	at learning.tests.LoginAppTest.LogInToApplication(LoginAppTest.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -126,9 +169,18 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="LogInToApplication">
-                  </a> <!-- LogInToApplication -->
+                  <a name="LogInToApplication(testuser300@friender.in,S@ty@1qq5)">
+                  </a> <!-- LogInToApplication(testuser300@friender.in,S@ty@1qq5) -->
                   <span class="method-name">LogInToApplication</span>
+                  <span class="parameters">(testuser300@friender.in,S@ty@1qq5)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="LogInToApplication(testuser305@gmail.in,S@ty@1qq5)">
+                  </a> <!-- LogInToApplication(testuser305@gmail.in,S@ty@1qq5) -->
+                  <span class="method-name">LogInToApplication</span>
+                  <span class="parameters">(testuser305@gmail.in,S@ty@1qq5)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,16 +237,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'LogInToApplication')
 data.setCell(0, 2, 'learning.tests.LoginAppTest')
-data.setCell(0, 3, 6878);
+data.setCell(0, 3, 5928);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'LogInToApplication')
+data.setCell(1, 2, 'learning.tests.LoginAppTest')
+data.setCell(1, 3, 5623);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'LogInToApplication')
+data.setCell(2, 2, 'learning.tests.LoginAppTest')
+data.setCell(2, 3, 9);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -226,12 +286,38 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">LogInToApplication</span>
-                <span class="method-start">3891 ms</span>
+                <span class="method-name">LogInToApplication(testuser305@gmail.in,S@ty@1qq5)</span>
+                <span class="method-start">2522 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">10773 ms</span>
+                <span class="method-start">8154 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">11338 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">LogInToApplication(testuser300@friender.in,S@ty@1qq5)</span>
+                <span class="method-start">13422 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">19351 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">22551 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">LogInToApplication(testuser321@friender.in,!Aworker2#)</span>
+                <span class="method-start">24387 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">24404 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
